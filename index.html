@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EazziEffects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- ===== TIMELINE SCRUBBER NAV ===== -->
+  <div class="scrubber">
+    <div class="scrubber-top">
+      <div class="brand">EAZZI<span>EFFECTS</span></div>
+      <nav class="clip-nav">
+        <a href="#work">Reels</a>
+        <a href="#shorts">Shorts</a>
+        <a href="#docs">Docs</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="track">
+      <div class="track-fill" id="trackFill"></div>
+      <div class="playhead" id="playhead"></div>
+    </div>
+    <div class="timecode-readout" id="timecode">00:00:00:00</div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+   <section class="hero" style="padding-top:120px;">
+    <div class="rec-tag"><span class="rec-dot"></span> Now Editing</div>
+    <h1>VIDEO EDITOR &<br><span class="line2">PHOTOGRAPHER</span></h1>
+    <p class="tagline">I cut fast, punchy content for social — reels, shorts, events and documentaries — built to hold attention and get shared.</p>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">View Work</a>
+      <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="num">40+</div><div class="label">Projects Edited</div></div>
+      <div><div class="num">3</div><div class="label">Formats — Reels / Shorts / Docs</div></div>
+      <div><div class="num">48H</div><div class="label">Avg. Turnaround</div></div>
+    </div>
+  </section>
+
+  <!-- ===== WORK / FILTERABLE GRID ===== -->
+  <section id="work">
+    <div class="sec-head">
+      <div class="sec-title">Selected Work</div>
+      <div class="sec-code">BIN // 01–06</div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="social">Social / Reels</button>
+      <button class="filter-btn" data-filter="short">Shorts</button>
+      <button class="filter-btn" data-filter="doc">Mini-Docs</button>
+    </div>
+
+    <div class="grid" id="videoGrid">
+
+      <!-- CARD 1 — replace YOUR_VIDEO_ID_1 with your YouTube unlisted video ID -->
+      <div class="card" data-cat="social">
+        <div class="card-media">
+          <iframe src="https://www.youtube.com/embed/mJxMh3ddlkw?feature=share" title="Project Title One" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span class="cat-tag">Social</span>
+          <span class="duration-tag">0:32</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Project I</div>
+          <div class="card-client">HIPCITY</div>
+        </div>
+      </div>
+
+      <!-- CARD 2 — replace YOUR_VIDEO_ID_2 with your YouTube unlisted video ID -->
+      <div class="card" data-cat="social">
+        <div class="card-media">
+          <iframe src="https://www.youtube.com/embed/_6H5xG5yPBU?feature=share" title="Project Title Two" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span class="cat-tag">Social</span>
+          <span class="duration-tag">0:41</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Project II</div>
+          <div class="card-client">HIPCITY</div>
+        </div>
+      </div>
+
+      <!-- CARD 3 — replace YOUR_VIDEO_ID_3 with your YouTube unlisted video ID -->
+      <div class="card" data-cat="short" id="shorts">
+        <div class="card-media">
+          <iframe src="https://www.youtube.com/embed/GU31TehbtOs?feature=share" title="Project Title Three" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span class="cat-tag">Short</span>
+          <span class="duration-tag">0:58</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Project III</div>
+          <div class="card-client">HIPCITY</div>
+        </div>
+      </div>
+
+      <!-- CARD 4 — replace YOUR_VIDEO_ID_4 with your YouTube unlisted video ID -->
+      <div class="card" data-cat="short">
+        <div class="card-media">
+          <iframe src="https://www.youtube.com/embed/_UPeyprmLPY?feature=share" title="Project Title Four" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span class="cat-tag">Short</span>
+          <span class="duration-tag">1:02</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Project IV</div>
+          <div class="card-client">HIPCITY</div>
+        </div>
+      </div>
+
+      <!-- CARD 5 (doc, landscape) — replace YOUR_VIDEO_ID_5 with your YouTube unlisted video ID -->
+      <div class="card" data-cat="doc" id="docs" style="grid-column: span 2;">
+        <div class="card-media wide">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XDhWBbhKv6o?si=S7wYYytGNfV5nCGT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <span class="cat-tag">Mini-Doc</span>
+          <span class="duration-tag">04:00</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Project V</div>
+          <div class="card-client">HIPCITY</div>
+        </div>
+      </div>
+
+      <!-- CARD 6 (doc, landscape) — replace YOUR_VIDEO_ID_6 with your YouTube unlisted video ID -->
+      <div class="card" data-cat="doc" style="grid-column: span 2;">
+        <div class="card-media wide">
+          <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_6" title="Project Title Six" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BgRH9e8VJ1U?si=G421i3SXyt_Qr47Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <span class="cat-tag">Full Doc</span>
+          <span class="duration-tag">2:23:00</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Project VI</div>
+          <div class="card-client">NACAT</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="sec-head">
+      <div class="sec-title">About</div>
+      <div class="sec-code">REEL // INFO</div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>Started editing because I had passion for the craft. Now I make videos shorter, better, and more watchable. That's basically the whole job description.</p>
+        <p>Turns out I liked being the one who decides what actually makes the cut. Now I do it for brands and creators who need their stuff to hit in the first three seconds or get scrolled past.</p>
+      </div>
+      <div class="skills-list">
+        <div><span>Shorts / Reels</span><span>Premiere Pro</span></div>
+        <div><span>Social Cutdowns / Motion Graphics</span><span>CapCut / After Effects</span></div>
+        <div><span>Mini-Documentaries</span><span>Premiere Pro</span></div>
+        <div><span>Color & Sound</span><span>Premiere Pro</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer id="contact">
+    <div class="contact-inner">
+      <h2>Let's Create<br>Something Great.</h2>
+      <div class="contact-links">
+        <a href="mailto:you@example.com">eazzidanladi@gmail.com</a>
+        <!-- <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">LinkedIn</a> -->
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 EazziEffects — Video Editor</span>
+        <span>Based in Nigeria</span>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+  </footer>
+
+
+</body>
+</html>
